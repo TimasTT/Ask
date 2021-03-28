@@ -1,51 +1,16 @@
+{% load static %}
 <!doctype html>
 <html lang="en" class="h-100 font">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Konoplyov Timofey">
-    <title>Ask Tima</title>
-    <link rel="canonical" href="#">
-    <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="../css/custom_styles.css" rel="stylesheet">
-</head>
+{% include "include/navbar_signup.html"%}
 
 <body class="d-flex flex-column h-100">
-    <header>
-        <!--navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <div class="container-fluid">
-                <a class="navbar_brand" href="#">Ask Tima</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <form class="d-flex">
-                        <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
-                        <button type="button" class="btn btn-dark search-btn">Ask!</button>
-                    </form>
-                </div>
-            </div>
-            <div class="container">
-                <div class="col-md-4"></div>
-                <div class="col-md-2">
-                    <a class="nav-text">log in</a>
-                </div>
-                <div class="col-md-6">
-                    <a class="nav-text">register</a>
-                </div>
-            </div>
-        </nav>
-    </header>
     <!-- Begin page content -->
     <main class="flex-shrink-0">
         <div class="container">
             <div class="row">
                 <div class="col-8">
+                    {% block content %}
                     <div class="title">Registration</div>
                     <div class="space_bottom-40px"></div>
                     <div id="#" style="color: red;">
@@ -98,9 +63,11 @@
                             <button type="button" class="btn btn-dark answer-btn">Register!</button>
                         </div>
                     </div>
+                    {% endblock content %}
                 </div>
                 <!-- right panel -->
                 <div class="col-4">
+                    {% block side %}
                     <div class="title space-left-40px">Popular tags</div>
                     <ul class="nav space-left-20px">
                         <li class="nav-item">
@@ -137,6 +104,7 @@
                         <a class="row popular-link">V Pupkin</a>
                         <div class="space_bottom-200px"></div>
                     </div>
+                    {% endblock side %}
                 </div>
             </div>
         </div>
@@ -147,7 +115,7 @@
             <a class="nav-text" href="#">Ask Tima</a>
         </div>
     </footer>
-    <script src="../js/bootstrap.bundle.min.js"> </script>
+    <script src="{% static "js/bootstrap.bundle.min.js"%}"> </script>
 </body>
 
 </html>

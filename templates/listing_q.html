@@ -1,230 +1,75 @@
-<!doctype html>
-<html lang="en" class="h-100 font">
+{% extends "include/base_login.html" %}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Konoplyov Timofey">
-    <title>Ask Tima</title>
-    <link rel="canonical" href="#">
-    <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="../css/custom_styles.css" rel="stylesheet">
-</head>
+{% load static %}
 
-<body class="d-flex flex-column h-100">
-    <header>
-        <!--navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <div class="container-fluid">
-                <a class="navbar_brand" href="#">Ask Tima</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <form class="d-flex">
-                        <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
-                        <button type="button" class="btn btn-dark search-btn">Ask!</button>
-                    </form>
-                    <img class="img_in_navbar rounded-circle" src="../img/monkey-d-luffy-gg.gif"></img>
-                </div>
-            </div>
-            <div class="container">
-                <div class="col">
-                    <div class="row">
-                        <div class="nav-text">Timofey Konoplyov</div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <a class="nav-text">settings</a>
-                        </div>
-                        <div class="col">
-                            <a class="nav-text">log out</a>
-                        </div>
-                    </div>
-                </div>
-        </nav>
-    </header>
-    <!-- Begin page content -->
-    <main class="flex-shrink-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-8">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <div class="title">Tag: </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link title-link" href="#">bender</a>
-                        </li>
-                    </ul>
-                    <!-- first question -->
-                    <div class="row question">
-                        <div class="col-2">
-                            <img class="img_in_question" src="../img/monkey-d-luffy-gg.gif"></img>
-                        </div>
-                        <div class="col-10">
-                            <a class="question-title" href="#">How to a build a moon park?</a>
-                            <div class="question-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                                aliquam voluptatem veniam, est atque cumque eum delectus sint!aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                            </div>
-                            <div class="row question-footer">
-                                <div class="col-3">
-                                    <a href="#">answer(n)</a>
-                                </div>
-                                <div class="col-2">Tags:</div>
-                                <div class="col-6">
-                                    <ul class="nav">
-                                        <li class="nav-item">
-                                            <a href="#">black-jack</a>
-                                        </li>
-                                        <li class="nav-item second-question-tag">
-                                            <a href="#">bender</a>
-                                        </li>
-                                        <li class="nav-item second-question-tag">
-                                            <a href="#">best</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- second question -->
-                    <div class="row question">
-                        <div class="col-2">
-                            <img class="img_in_question" src="../img/monkey-d-luffy-gg.gif"></img>
-                            <!-- <div class="spinner-border text-dark question-spinner" role="status">
-                                <span class="visually-hidden">Loading...</span>
-                            </div> -->
-                        </div>
-                        <div class="col-10">
-                            <a class="question-title" href="#">How to a build a moon park?</a>
-                            <div class="question-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                                aliquam voluptatem veniam, est atque cumque eum delectus sint!aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                            </div>
-                            <div class="row question-footer">
-                                <div class="col-3">
-                                    <a href="#">answer(n)</a>
-                                </div>
-                                <div class="col-2">Tags:</div>
-                                <div class="col-6">
-                                    <ul class="nav">
-                                        <li class="nav-item">
-                                            <a href="#">black-jack</a>
-                                        </li>
-                                        <li class="nav-item second-question-tag">
-                                            <a href="#">bender</a>
-                                        </li>
-                                        <li class="nav-item second-question-tag">
-                                            <a href="#">best</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- third question -->
-                    <div class="row question">
-                        <div class="col-2">
-                            <img class="img_in_question" src="../img/monkey-d-luffy-gg.gif"></img>
-                        </div>
-                        <div class="col-10">
-                            <a class="question-title" href="#">How to a build a moon park?</a>
-                            <div class="question-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                                aliquam voluptatem veniam, est atque cumque eum delectus sint!aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                            </div>
-                            <div class="row question-footer">
-                                <div class="col-3 font">
-                                    <a href="#">answer(n)</a>
-                                </div>
-                                <div class="col-2 font">Tags:</div>
-                                <div class="col-6 font">
-                                    <ul class="nav">
-                                        <li class="nav-item">
-                                            <a href="#">black-jack</a>
-                                        </li>
-                                        <li class="nav-item second-question-tag">
-                                            <a href="#">bender</a>
-                                        </li>
-                                        <li class="nav-item second-question-tag">
-                                            <a href="#">best</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- page navigation -->
-                    <nav aria-label="..." class="nav-page-pos">
-                        <ul class="pagination">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1">Previous</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item active">
-                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <!-- right panel -->
-                <div class="col-4">
-                    <div class="title space-left-40px">Popular tags</div>
-                    <ul class="nav space-left-20px">
-                        <li class="nav-item">
-                            <a class="popular-title" href="#">perl</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="popular-title" href="#" style="color: black; font-size: 20px;">Python</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="popular-title" href="#" style="color: blue; font-size: 20px;">TechnoPark</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="popular-title" href="#" style="color: red; font-size: 25px;">MySQL</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="popular-title" href="#" style="color: green; font-size: 30px;">Django</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="popular-title" href="#" style="color: black; font-size: 25px;">MailRU</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="popular-title" href="#" style="color: black; font-size: 15px;">Voloshin</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="popular-title" href="#" style="color: yellow; font-size: 20px;">FireFox</a>
-                        </li>
-                    </ul>
-                    <div class="col space-left-40px">
-                        <div class="title">Best Members</div>
-                        <a class="row popular-link">Mr Freeman</a>
-                        <a class="row popular-link">Dr House</a>
-                        <a class="row popular-link">Timofey Konoplyov</a>
-                        <a class="row popular-link">Bender</a>
-                        <a class="row popular-link">V Pupkin</a>
-                        <div class="space_bottom-200px"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <!-- footer -->
-    <footer class="bg-light text-center text-lg-start">
-        <div class="text-center p-3 bg-dark">
-            <a class="nav-text" href="#">Ask Tima</a>
-        </div>
-    </footer>
-    <script src="../js/bootstrap.bundle.min.js"> </script>
-</body>
+{% block content %}
+    <ul class="nav">
+        <li class="nav-item">
+            <div class="title">Tag:</div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link title-link" href="#">bender</a>
+        </li>
+    </ul>
+    <!-- first question -->
+    {% include "include/question_temlate.html" %}
+    <!-- second question -->
+    {% include "include/question_temlate.html" %}
+    <!-- third question -->
+    {% include "include/question_temlate.html" %}
+    <!-- page navigation -->
+    <nav aria-label="..." class="nav-page-pos">
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active">
+                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+{% endblock content %}
 
-</html>
+{% block side %}
+    <div class="title space-left-40px">Popular tags</div>
+    <ul class="nav space-left-20px">
+        <li class="nav-item">
+            <a class="popular-title" href="#">perl</a>
+        </li>
+        <li class="nav-item">
+            <a class="popular-title" href="#" style="color: black; font-size: 20px;">Python</a>
+        </li>
+        <li class="nav-item">
+            <a class="popular-title" href="#" style="color: blue; font-size: 20px;">TechnoPark</a>
+        </li>
+        <li class="nav-item">
+            <a class="popular-title" href="#" style="color: red; font-size: 25px;">MySQL</a>
+        </li>
+        <li class="nav-item">
+            <a class="popular-title" href="#" style="color: green; font-size: 30px;">Django</a>
+        </li>
+        <li class="nav-item">
+            <a class="popular-title" href="#" style="color: black; font-size: 25px;">MailRU</a>
+        </li>
+        <li class="nav-item">
+            <a class="popular-title" href="#" style="color: black; font-size: 15px;">Voloshin</a>
+        </li>
+        <li class="nav-item">
+            <a class="popular-title" href="#" style="color: yellow; font-size: 20px;">FireFox</a>
+        </li>
+    </ul>
+    <div class="col space-left-40px">
+        <div class="title">Best Members</div>
+        <a class="row popular-link">Mr Freeman</a>
+        <a class="row popular-link">Dr House</a>
+        <a class="row popular-link">Timofey Konoplyov</a>
+        <a class="row popular-link">Bender</a>
+        <a class="row popular-link">V Pupkin</a>
+        <div class="space_bottom-200px"></div>
+    </div>
+{% endblock side %}
