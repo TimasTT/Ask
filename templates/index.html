@@ -8,17 +8,12 @@
             <div class="title">My questions</div>
         </li>
         <li class="nav-item">
-            <a class="nav-link title-link" href="#">Hot questions</a>
+            <a class="nav-link title-link" href="{% url "hot" %}">Hot questions</a>
         </li>
     </ul>
-
-    <!-- first question -->
-    {% include "include/question_temlate.html" %}
-    <!-- second question -->
-    {% include "include/question_temlate.html" %}
-    <!-- third question -->
-    {% include "include/question_temlate.html" %}
-    <!-- page navigation -->
+    {% for question in questions %}
+        {% include "include/question_temlate.html" %}
+    {% endfor %}
     <nav aria-label="..." class="nav-page-pos">
         <ul class="pagination">
             <li class="page-item disabled">

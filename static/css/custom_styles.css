@@ -162,7 +162,6 @@ li.nav-item a {
 
 .one-question {
     padding: 30px;
-    height: 500px;
     width: 900px;
 }
 
@@ -194,7 +193,6 @@ li.nav-item a {
 	background: black;
 	width: 900px;
 	height: 2px;
-	margin-bottom: 90px;
 }
 
 .answer-text {

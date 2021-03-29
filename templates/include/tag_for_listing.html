@@ -1,0 +1,14 @@
+{% load static %}
+
+<ul class="nav">
+    <li class="nav-item">
+        <div class="title">Tag:</div>
+    </li>
+    <li class="nav-item">
+        <div class="nav-link title-link">
+            <a href="{% url "tag" pk=tags.id %}">
+                {{ tags.text }}
+            </a>
+        </div>
+    </li>
+</ul>

@@ -5,49 +5,12 @@
 {% block content %}
     <!-- question -->
     <div class="row one-question">
-        <div class="col-2">
-            <img class="img_in_question" src="{% static "img/monkey-d-luffy-gg.gif"%}"></img>
-        </div>
-        <div class="col-10">
-            <div class="one-question-title" href="#">How to a build a moon park?</div>
-            <div class="one-question-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                aliquam voluptatem veniam, est atque cumque eum delectus sint! Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Iste atque ea quis
-                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                aliquam voluptatem veniam, est atque cumque eum delectus sint! Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Iste atque ea quis
-                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                aliquam voluptatem veniam, est atque cumque eum delectus sint! Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Iste atque ea quis
-                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                aliquam voluptatem veniam, est atque cumque eum delectus sint!
-            </div>
-            <div class="row question-footer">
-                <div class="col-1"></div>
-                <div class="col-2">Tags:</div>
-                <div class="col-6">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a href="#">black-jack</a>
-                        </li>
-                        <li class="nav-item second-question-tag">
-                            <a href="#">bender</a>
-                        </li>
-                        <li class="nav-item second-question-tag">
-                            <a href="#">best</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="dark-line"></div>
-        </div>
+        {% include "include/one_question_template.html" %}
     </div>
-    <div class="space-bottom-100px"></div>
-    <!-- answer 1 -->
-    {% include "include/answer_template.html" %}
-    <!-- answer 2 -->
-    {% include "include/answer_template.html" %}
+    {% comment %}<div class="space-bottom-100px"></div>{% endcomment %}
+    {% for answer in answers %}
+        {% include "include/answer_template.html" %}
+    {% endfor %}
     <!-- page navigation -->
     <nav aria-label="..." class="nav-page-pos">
         <ul class="pagination">

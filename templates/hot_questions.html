@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-    {% include "include/tag_for_listing.html" %}
+    <a class="nav-link title-link" href="{% url "hot" %}">Hot questions</a>
     {% for question in questions %}
         {% include "include/question_temlate.html" %}
     {% endfor %}
