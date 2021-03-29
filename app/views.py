@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.paginator import Paginator
 
 questions = [
     {
@@ -12,27 +13,33 @@ answers = [
     {
         'id': idx,
         'text': f'Some text for answer #{idx}'
-    } for idx in range(5)
+    } for idx in range(10)
 ]
 
 tags = [{'id' : 0, 'text' : 'bender'}, {'id' : 1, 'text' : 'black-jack'}, {'id' : 2, 'text' : 'best'}]
 
 def index(request):
-    return render(request, 'index.html', {'questions' : questions})
+    context = paginate(questions, request, 3)
+
+    return render(request, 'index.html', context)
 
 def ask(request):
     return render(request, 'ask.html', {})
 
 def listing_q(request, pk):
-    cur_tag = tags[pk]
-    return render(request, 'listing_q.html', {'questions' : questions, 'tags' : cur_tag})
+    context = paginate(questions, request, 3)
+    context['tags'] = tags[pk]
+
+    return render(request, 'listing_q.html', context)
 
 def question(request, pk):
-    cur_question = questions[pk]
-    return render(request, 'question.html', {'answers' : answers, 'question' : cur_question})
+    context = paginate(questions, request, 3)
+    context['question'] = questions[pk]
+    return render(request, 'question.html', context)
 
 def hot(request):
-    return render(request, 'hot_questions.html', {'questions' : questions})
+    context = paginate(questions, request, 3)
+    return render(request, 'hot_questions.html', {'page' : context})
 
 def login(request):
     return render(request, 'login.html', {})
@@ -42,3 +49,28 @@ def settings(request):
 
 def signup(request):
     return render(request, 'signup.html', {})
+
+def paginate(objects_list, request, per_page):
+    paginator = Paginator(objects_list, per_page)
+    page_number = request.GET.get('page', 1)
+    page = paginator.get_page(page_number)
+
+    is_paginated = page.has_other_pages()
+    if page.has_previous():
+        prev_url = '?page={}'.format(page.previous_page_number())
+    else:
+        prev_url = ''
+
+    if page.has_next():
+        next_url = '?page={}'.format(page.next_page_number())
+    else:
+        next_url = ''
+
+    context = {
+        'page': page,
+        'is_paginated': is_paginated,
+        'next_url': next_url,
+        'prev_url': prev_url
+    }
+
+    return context
