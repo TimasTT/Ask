@@ -39,7 +39,7 @@ def question(request, pk):
 
 def hot(request):
     context = paginate(questions, request, 3)
-    return render(request, 'hot_questions.html', {'page' : context})
+    return render(request, 'hot_questions.html', context)
 
 def login(request):
     return render(request, 'login.html', {})
