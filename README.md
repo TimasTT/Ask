@@ -1,5 +1,5 @@
 Ask
-Group: APO-11
+Group: APO-11,
 Student: Konoplyov T.O.
 ----------------------------------------------------------------------------------
 Link to the filled database:
