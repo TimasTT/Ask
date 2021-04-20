@@ -1,19 +1,11 @@
 <ul class="nav">
-    <li class="nav-item">
-        <div>
-            <a href="{% url "tag" pk=0 %}">
-                bender
-            </a>
-        </div>
-    </li>
-    <li class="nav-item second-question-tag">
-        <a href="{% url "tag" pk=1 %}">
-            black-jack
-        </a>
-    </li>
-    <li class="nav-item second-question-tag">
-        <a href="{% url "tag" pk=2 %}">
-            best
-        </a>
-    </li>
+    {% for tag in  question.tag.all %}
+        <li class="nav-item second-question-tag">
+            <div>
+                <a href="{% url "tag" pk=tag.id %}">
+                    {{ tag.designation }}
+                </a>
+            </div>
+        </li>
+    {% endfor %}
 </ul>

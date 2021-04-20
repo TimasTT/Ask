@@ -1,21 +1,21 @@
 /*<!-- Custom styles for this template -->*/
 
 main > .container {
-  padding: 170px 15px 0;
+    padding: 170px 15px 0;
 }
 
 .font {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 li.nav-item a {
-	text-decoration: auto;
+    text-decoration: auto;
 }
 
 /*nav-bar-head*/
 
 .navbar_brand {
-	font: -webkit-control;
+    font: -webkit-control;
     font-size: 50px;
     padding-left: 20px;
     text-decoration: auto;
@@ -26,34 +26,34 @@ li.nav-item a {
 }
 
 .search {
-	margin-left: 58px;
+    margin-left: 58px;
     width: 530px;
 }
 
 .search-btn {
-	border: 2px white groove;
-	color: white;
+    border: 2px white groove;
+    color: white;
 }
 
 .img_in_navbar {
-	width: 100px;
+    width: 100px;
     height: 100px;
     margin-left: 400px;
     border: 2px white groove;
 }
 
 .nav-text {
-	color: white;
-	font-size: 25px !important;
-	text-decoration: auto;
+    color: white;
+    font-size: 25px !important;
+    text-decoration: auto;
 }
 
 /*title*/
 
 .title-link {
-	padding-top: 20px;
+    padding-top: 20px;
     padding-left: 40px;
-	font-size: 34px;
+    font-size: 34px;
     text-decoration: underline;
 }
 
@@ -64,22 +64,20 @@ li.nav-item a {
 /*question-box*/
 
 .question {
-	border: 2px black groove;
+    border: 2px black groove;
     border-radius: 30px;
     padding: 30px;
     margin-top: 40px;
-    height: 250px;
-    width: 875px;
 }
 
 .img_in_question {
-	width: 100px;
+    width: 100px;
     height: 100px;
     padding-top: 10px;
 }
 
 .question-title {
-	font-size: 30px;
+    font-size: 30px;
     margin-top: -12px;
     margin-bottom: 12px;
     text-decoration: underline;
@@ -88,7 +86,7 @@ li.nav-item a {
 }
 
 .question-text {
-	font-size: 20px;
+    font-size: 20px;
     overflow: hidden;
     padding-top: 11px;
     height: 100px;
@@ -99,11 +97,11 @@ li.nav-item a {
 }
 
 .question-footer {
-	margin-top: 24px;
+    margin-top: 24px;
 }
 
 .second-question-tag {
-	padding-left: 20px;
+    padding-left: 20px;
 }
 
 /*.question-spinner {
@@ -114,7 +112,7 @@ li.nav-item a {
 /*right panel*/
 
 .popular-link {
-	font-size: 25px;
+    font-size: 25px;
     text-decoration: underline;
     margin-left: 5px;
     margin-top: 15px;
@@ -122,16 +120,16 @@ li.nav-item a {
 
 
 .space-left-40px {
-	margin-left: 40px;
-	margin-top: 80px;
+    margin-left: 40px;
+    margin-top: 80px;
 }
 
 .space-left-20px {
-	margin-left: 20px;
+    margin-left: 20px;
 }
 
 .popular-title {
-	margin: 20px;
+    margin: 20px;
 }
 
 /*navigation of page*/
@@ -144,18 +142,18 @@ li.nav-item a {
 /*question-adding page*/
 
 .space_bottom-40px {
-	margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .add-btn {
-	border: 2px gray solid;
+    border: 2px gray solid;
     color: white;
     margin-left: 145px;
     margin-bottom: 40px;
 }
 
 .space_bottom-200px {
-	margin-bottom: 200px;
+    margin-bottom: 200px;
 }
 
 /*one question page*/
@@ -166,13 +164,13 @@ li.nav-item a {
 }
 
 .img_in_one_question {
-	width: 150px;
+    width: 150px;
     height: 150px;
     padding-top: 10px;
 }
 
 .one-question-title {
-	font-size: 40px;
+    font-size: 40px;
     margin-top: -12px;
     margin-bottom: 12px;
     text-decoration: auto;
@@ -180,7 +178,7 @@ li.nav-item a {
 }
 
 .one-question-text {
-	font-size: 20px;
+    font-size: 20px;
     word-break: break-all;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -188,24 +186,24 @@ li.nav-item a {
 }
 
 .dark-line {
-	margin-top: 20px;
-	margin-left: -200px;
-	background: black;
-	width: 900px;
-	height: 2px;
+    margin-top: 20px;
+    margin-left: -200px;
+    background: black;
+    width: 900px;
+    height: 2px;
 }
 
 .answer-text {
-	font-size: 20px;
+    font-size: 20px;
     overflow: hidden;
     word-break: break-all;
     display: -webkit-box;
-/*    -webkit-line-clamp: 6;*/
-    -webkit-box-orient: vertical;	
+    /*    -webkit-line-clamp: 6;*/
+    -webkit-box-orient: vertical;
 }
 
 .answer {
-	border: 2px black groove;
+    border: 2px black groove;
     border-radius: 30px;
     padding: 30px;
     width: 875px;
@@ -213,21 +211,31 @@ li.nav-item a {
 }
 
 .space-bottom-100px {
-	margin-top: 100px;
+    margin-top: 100px;
 }
 
 .col-8 > .dark-line {
-	margin-left: -30px;
-	margin-bottom: 40px;
+    margin-left: -30px;
+    margin-bottom: 40px;
 }
 
 .answer-btn {
-	border: 2px gray solid;
+    border: 2px gray solid;
     color: white;
     margin-top: 10px;
     margin-bottom: 40px;
 }
 
 li.nav_item div {
-	text-decoration: auto;
+    text-decoration: auto;
+}
+
+.like-cnt {
+    margin-top: 11px;
+    margin-bottom: 1rem;
+    margin-left: 45px;
+}
+
+.like-btm {
+    margin-top: 5px;
 }

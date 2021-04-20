@@ -1,25 +1,11 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-
-questions = [
-    {
-        'id': idx,
-        'title': f'Title number {idx}',
-        'text': f'Some text for question #{idx}'
-    } for idx in range(10)
-]
-
-answers = [
-    {
-        'id': idx,
-        'text': f'Some text for answer #{idx}'
-    } for idx in range(10)
-]
+from app.models import Qstion, User, Answer, Tags
 
 tags = [{'id' : 0, 'text' : 'bender'}, {'id' : 1, 'text' : 'black-jack'}, {'id' : 2, 'text' : 'best'}]
 
 def index(request):
-    context = paginate(questions, request, 3)
+    context = paginate(Qstion.objects.all(), request, 3)
 
     return render(request, 'index.html', context)
 
@@ -27,18 +13,18 @@ def ask(request):
     return render(request, 'ask.html', {})
 
 def listing_q(request, pk):
-    context = paginate(questions, request, 3)
-    context['tags'] = tags[pk]
+    context = paginate(Qstion.objects.filter(tag=pk), request, 3)
+    context['tag'] = Tags.objects.get(pk=pk).designation
 
     return render(request, 'listing_q.html', context)
 
 def question(request, pk):
-    context = paginate(questions, request, 3)
-    context['question'] = questions[pk]
+    context = paginate(Answer.objects.filter(question_id=pk), request, 3)
+    context['question'] = Qstion.objects.get(pk = pk)
     return render(request, 'question.html', context)
 
 def hot(request):
-    context = paginate(questions, request, 3)
+    context = paginate(Qstion.objects.all(), request, 3)
     return render(request, 'hot_questions.html', context)
 
 def login(request):

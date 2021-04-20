@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from app.models import Article, Author
+from app.models import Qstion, User, Answer, Tags
 
-admin.site.register(Article)
-admin.site.register(Author)
-
-
+admin.site.register(Qstion)
+admin.site.register(User)
+admin.site.register(Answer)
+admin.site.register(Tags)
