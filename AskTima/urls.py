@@ -28,6 +28,6 @@ urlpatterns = [
     path('', views.index, name = 'main'),
     path('hot', views.hot, name = 'hot'),
     path('question/<int:pk>/', views.question, name = 'question'),
-    path('listing/<int:pk>/', views.listing_q, name = 'tag')
+    path('listing/<int:pk>/', views.listing_q, name = 'tag'),
 ]
 

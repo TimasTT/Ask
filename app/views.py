@@ -1,11 +1,14 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
+from django.template.defaultfilters import register
+
 from app.models import Qstion, User, Answer, Tags
 
 tags = [{'id' : 0, 'text' : 'bender'}, {'id' : 1, 'text' : 'black-jack'}, {'id' : 2, 'text' : 'best'}]
 
 def index(request):
     context = paginate(Qstion.objects.all(), request, 3)
+    context['answers'] = Answer.objects.all()
 
     return render(request, 'index.html', context)
 

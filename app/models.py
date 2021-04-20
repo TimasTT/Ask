@@ -52,6 +52,9 @@ class Answer(models.Model):
 
     objects = AnswerManager()
 
+    def __str__(self):
+        return self.text
+
     class Meta:
         verbose_name = 'Answer'
         verbose_name_plural = 'Answer'
